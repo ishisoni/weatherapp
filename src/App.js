@@ -4,7 +4,7 @@ import Form from './form';
 import Weather from './weather';
 import Tweets from './tweets';
 import Tweet from './react-tweet';
-const Api_Key = "375e0d19db84c17735904eef8de0d48a";
+const Api_Key = "";
 const tweetData = {
     id_str: 'XXX',
     user: {
@@ -51,7 +51,7 @@ class App extends React.Component{
   getWeather = async(e) => {
 
       e.preventDefault();
-      const Api_Key = "375e0d19db84c17735904eef8de0d48a";
+      const Api_Key = "";
       const city = e.target.elements.city.value;
       const country = e.target.elements.country.value;
       const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}`);
